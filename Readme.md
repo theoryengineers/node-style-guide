@@ -529,4 +529,23 @@ software than they can solve.
 Feel free to use getters that are free from [side effects][sideeffect], like
 providing a length property for a collection class.
 
+## Javascript Files
+
+JavaScript programs should be stored in and delivered as .js files.
+
+JavaScript code should not be embedded in HTML files unless the code is specific to a single session. Code in HTML adds significantly to pageweight with no opportunity for mitigation by caching and compression.
+
+<script src=filename.js> tags should be placed as late in the body as possible. This reduces the effects of delays imposed by script loading on other page components. There is no need to use the language or type attributes. It is the server, not the script tag, that determines the MIME type.
+
+## Comments
+
+Be generous with comments. It is useful to leave information that will be read at a later time by people (possibly yourself) who will need to understand what you have done. The comments should be well-written and clear, just like the code they are annotating. An occasional nugget of humor might be appreciated. Frustrations and resentments will not.
+
+It is important that comments be kept up-to-date. Erroneous comments can make programs even harder to read and understand.
+
+Make comments meaningful. Focus on what is not immediately visible. Don't waste the reader's time with stuff like
+
+    i = 0; // Set i to zero.
+Generally use line comments. Save block comments for any formal documentation.
+
 [sideeffect]: http://en.wikipedia.org/wiki/Side_effect_(computer_science)
